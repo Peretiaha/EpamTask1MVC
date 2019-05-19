@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+
+}
+
+
+
+
+<body>
+    <div class="main-body">
+        @for (var i = 0; i < ViewBag.ArticleCount; i++)
+        {
+            <div class="article">
+                <p style="font-size:30px;">@ViewBag.Article[i].Name </p><p>      @ViewBag.Article[i].Date</p>
+                <p class="articleText">@ViewBag.Article[i].Text </p>
+            </div>
+        }
+    </div>
+    <div class="right-sidebar">
+        <p>
+            @Html.ActionLink("Main", "Index")
+        </p>
+        <p>
+            @Html.ActionLink("GuestList", "../Guest/Guest")
+        </p>
+        <p>
+            @Html.ActionLink("Profile", "../Profile/ProfileList")
+        </p>
+    </div>
+</body>
+

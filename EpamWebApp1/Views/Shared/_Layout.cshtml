@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – приложение ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <p><a name="top"></a></p>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <p class="HeadText"> @Html.ActionLink("Cinema BLOG. Glad to see you!)", "../Home/Index", null, new { @class = "my-class" }) </p>
+            <div class="Logo"> </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+
+
+    <footer>
+        <p class="footer"><a href="#top">  &copy;</a> <a href="#top">  back to top </a> @DateTime.Now.Year – приложение ASP.NET</p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

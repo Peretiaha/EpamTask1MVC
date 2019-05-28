@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,6 +8,9 @@ namespace EpamWebApp1.Models
 {
     public class Profile
     {
+        [Key]
+        public int ProfileId { get; set; }
+
         public string Name { get; set; }
 
         public int Age { get; set; }

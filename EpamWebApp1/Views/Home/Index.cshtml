@@ -1,19 +1,19 @@
-﻿@{
+﻿@*@model EpamWebApp1.Models.Article*@
+   
+
+
+@{
     ViewBag.Title = "Home Page";
-
-
 }
-
-
 
 
 <body>
     <div class="main-body">
-        @for (var i = 0; i < ViewBag.ArticleCount; i++)
+        @for (var i = 0; i < @ViewBag.Article.Count ; i++)
         {
             <div class="article">
-                <p style="font-size:30px;">@ViewBag.Article[i].Name </p><p>      @ViewBag.Article[i].Date</p>
-                <p class="articleText">@ViewBag.Article[i].Text </p>
+                <p style="font-size:30px;">" @ViewBag.Article[0].Name </p><p>      @ViewBag.Article[0].date</p>
+                <p class="articleText">@ViewBag.Article[0].ArticleText </p>
             </div>
         }
     </div>

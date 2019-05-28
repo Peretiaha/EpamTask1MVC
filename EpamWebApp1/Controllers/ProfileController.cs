@@ -4,26 +4,37 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EpamWebApp1.Models;
+using StorageControl;
 
 namespace EpamWebApp1.Controllers
 {
     public class ProfileController : Controller
     {
         // GET: Profile
+        [HttpGet]
         public ActionResult ProfileList()
         {
             
             Profile profile = new Profile();
+            ViewBag.ProfList =  ProfileLogic.LoadProfile();
+            ViewBag.Profile = profile;
             
-            if (Request.HttpMethod == "POST")
+                            
+            return View();
+            
+        }
+
+        [HttpPost]
+        public ActionResult ProfileList(Profile prof)
+        {
+            try
             {
-                return View("../Profile/ProfileResults", profile);
+                if (ProfileLogic.Add(prof)) ViewBag.succes = "Thanks";
+                else ViewBag.danger = "You have been alredy fill this list";
             }
-            else
-            {
-                ViewBag.Profile = profile;
+            catch (Exception) { }
                 return View();
-            }
+
         }
 
 
@@ -31,5 +42,5 @@ namespace EpamWebApp1.Controllers
         {           
             return View(profile);
         }
-        }
+     }
 }

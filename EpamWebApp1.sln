@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpamWebApp1", "EpamWebApp1\EpamWebApp1.csproj", "{6F52CDBF-E07B-40FC-AC78-64CDE1B2AC59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageControl", "StorageControl\StorageControl.csproj", "{FCEA11C1-C825-4B9F-9852-AF7E9DE563E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6F52CDBF-E07B-40FC-AC78-64CDE1B2AC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F52CDBF-E07B-40FC-AC78-64CDE1B2AC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F52CDBF-E07B-40FC-AC78-64CDE1B2AC59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCEA11C1-C825-4B9F-9852-AF7E9DE563E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCEA11C1-C825-4B9F-9852-AF7E9DE563E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCEA11C1-C825-4B9F-9852-AF7E9DE563E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCEA11C1-C825-4B9F-9852-AF7E9DE563E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

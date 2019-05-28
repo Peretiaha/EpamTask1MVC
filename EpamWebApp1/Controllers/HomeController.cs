@@ -4,19 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EpamWebApp1.Models;
+using StorageControl;
 
 namespace EpamWebApp1.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
-        {
-            ArticleList ar = new ArticleList();
-            ViewBag.ArticleCount = ar.ArticleCount();
-            ViewBag.Article = ar.ArticleListFull();
-
-
-            return View();
+        {       
+           ViewBag.Article  = ArticleList.LoadArticle();
+           return View();
         }
 
         public ActionResult About()

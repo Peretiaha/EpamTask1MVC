@@ -1,5 +1,6 @@
 ﻿@*@model EpamWebApp1.Models.Article*@
-   
+
+@model EpamWebApp1.Models.Voiting
 
 
 @{
@@ -9,13 +10,20 @@
 
 <body>
     <div class="main-body">
-        @for (var i = 0; i < @ViewBag.Article.Count ; i++)
+        @for (var i = 0; i < @ViewBag.Article.Count; i++)
         {
             <div class="article">
-                <p style="font-size:30px;">" @ViewBag.Article[0].Name </p><p>      @ViewBag.Article[0].date</p>
-                <p class="articleText">@ViewBag.Article[0].ArticleText </p>
+                <p style="font-size:30px;">" @ViewBag.Article[i].Name </p><p>      @ViewBag.Article[i].date</p>
+                <p class="articleText">@ViewBag.Article[i].ArticleText </p>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @Html.ActionLink("More", "Details", "Article", new { id = ViewBag.Article[i].ArticleId }, new { target = "_blank", @class = "btn btn-default" })
+                    </div>
+                </div>
             </div>
         }
+
     </div>
     <div class="right-sidebar">
         <p>
@@ -27,6 +35,27 @@
         <p>
             @Html.ActionLink("Profile", "../Profile/ProfileList")
         </p>
-    </div>
+        <p>
+            @Html.ActionLink("Voiting", "../Profile/ProfileList")
+        </p>
+
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <p>Сериал или Фильм?)</p>
+            @Html.Name("Сериалы")
+            @Html.RadioButtonFor(modl => modl.Choice, "S")
+            @Html.Name("Фильмы")
+            @Html.RadioButtonFor(modl => modl.Choice, "F")
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+
+        }
+        </div>
 </body>
 

@@ -56,9 +56,33 @@
     <Compile Include="DbControls\ModelDb\Comments.cs" />
     <Compile Include="DbControls\Logic\CommentsList.cs" />
     <Compile Include="DbControls\ModelDb\Profile.cs" />
+    <Compile Include="DbControls\ModelDb\Voiting.cs" />
+    <Compile Include="Migrations\201905231731060_InitialCreate.cs" />
+    <Compile Include="Migrations\201905231731060_InitialCreate.Designer.cs">
+      <DependentUpon>201905231731060_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905301758518_BlogDB.cs" />
+    <Compile Include="Migrations\201905301758518_BlogDB.Designer.cs">
+      <DependentUpon>201905301758518_BlogDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905301829301_BlogDB1.cs" />
+    <Compile Include="Migrations\201905301829301_BlogDB1.Designer.cs">
+      <DependentUpon>201905301829301_BlogDB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905231731060_InitialCreate.resx">
+      <DependentUpon>201905231731060_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905301758518_BlogDB.resx">
+      <DependentUpon>201905301758518_BlogDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905301829301_BlogDB1.resx">
+      <DependentUpon>201905301829301_BlogDB1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

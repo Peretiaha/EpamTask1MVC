@@ -5,6 +5,10 @@
    
 }
 
+.ButtonMore {
+    width: 100px;
+}
+
 li {
     list-style-type: none;
 }
@@ -135,4 +139,8 @@ color: black;
     font-family: Arial;
     font-size: 24px;
     padding-bottom: 50px;
+}
+
+.article {
+    margin-top: 50px;
 }

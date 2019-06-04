@@ -10,14 +10,15 @@ namespace EpamWebApp1.Models
     public class Article  //: IEnumerable<Article>
     {
         [Key]
-        public int ArticleId { get; set;}   //Primary Key
+        public int ArticleId { get; set; }   //Primary Key
         public string Name { get; set; }
 
         public DateTime date { get; set; }
-        public string ArticleText{ get; set; }
+        public string ArticleText { get; set; }
+        public string Tags { get; set; }
 
         
-
         
+
     }
 }

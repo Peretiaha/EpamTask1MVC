@@ -10,11 +10,28 @@ namespace EpamWebApp1.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {       
            ViewBag.Article  = ArticleList.LoadArticle();
-           return View();
+           
+            return View();
         }
+
+        [HttpPost]
+        public ActionResult Index(Voiting voiting)
+        {
+            using (BlogDb db = new BlogDb())
+            {
+                db.Voiting.Add(voiting);
+                db.SaveChanges();
+
+            }
+                return View("../Home/About");
+        }
+
+
+
 
         public ActionResult About()
         {

@@ -1,0 +1,36 @@
+﻿@model EpamWebApp1.Models.Article
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h1>
+        
+    </h1>
+    <h4>Article</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <h2>
+            @ViewBag.Article.Name
+        </h2>
+
+        <h4>
+            @ViewBag.Article.date
+        </h4>
+
+        <p>
+            @ViewBag.Article.ArticleText
+        </p>
+
+        <p>
+            @ViewBag.Article.Tags
+        </p>
+
+
+
+    </dl>
+</div>
+

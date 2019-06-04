@@ -7,17 +7,16 @@
     <title>@ViewBag.Title – приложение ASP.NET</title>
     @Styles.Render("~/Content/css")
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-
+    <link href="~/Content/bootstrap.css" />
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-
     <p><a name="top"></a></p>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top haed" style="height:70px; display: inline-block;">
         <div class="container">
             <p class="HeadText"> @Html.ActionLink("Cinema BLOG. Glad to see you!)", "../Home/Index", null, new { @class = "my-class" }) </p>
-            <div class="Logo"> </div>
+            <div class="Logo" style="display:inline-block;"> </div>
         </div>
     </div>
     <div class="container body-content">
